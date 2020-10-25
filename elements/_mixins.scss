@@ -1,0 +1,13 @@
+// Boton
+@mixin button ($bg:$primary, $color:$secondary, $width:100px, $height:40px) {
+    width: $width;
+    height: $height;
+    border: 0.3px solid #000007;
+    margin-top: 20px;
+    
+    cursor: pointer;
+    font-size: 17px;
+    color: $color;
+    background: $bg;
+    outline: none;
+}

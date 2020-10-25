@@ -1,0 +1,74 @@
+@import '../elements/mixins';
+@import '../elements/colors';
+
+
+body {
+    background-image: url(../images/7.jpg);
+    background-repeat: repeat;
+    height: 100vh;
+    background-position: 0 900px;
+    position: absolute;
+}
+
+
+
+.grid-container {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 400px;
+    grid-template-rows: auto;
+
+
+    background: #fff;
+    margin: 80px 120px 0 120px;
+    text-align: center;
+    border-radius: 10px;
+    opacity: 0.95;
+
+    
+    
+}
+
+.grid-item {
+    margin: 10px 0 15px 0;
+}
+
+
+
+.grid-icon {
+    position: absolute;
+    top: -50px;
+    left: 150px;
+
+    background: #fff;
+    border-radius: 100%;
+}
+
+
+
+.grid-title {
+    background: #fff;
+    margin-top: 75px;
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+
+
+.tform {
+    width: 80%;
+    height: 40px;
+}
+
+
+.pform {
+    font-size: 20px;
+}
+
+
+.bform {
+    @include button($primary, #fff,);
+}
+
+
+
+

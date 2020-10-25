@@ -1,0 +1,123 @@
+<div class="div__grid-container-user">
+            <div class="div__grid-container-user__grid-item-user grid-item-user__usuario">
+                <p>Usuario</p>
+            </div>
+            <div class="div__grid-container-user__grid-item-user grid-item-user__nombre">
+                <p>Nombre</p>
+            </div>
+            <div class="div__grid-container-user__grid-item-user grid-item-user__apellido">
+                <p>Apellido</p>
+            </div>
+            <div class="div__grid-container-user__grid-item-user grid-item-user__fecha">
+                <p>Fecha de ingreso</p>
+            </div>
+            <div class="none-item-user">
+            </div>
+            <div class="div__grid-container-user__grid-item-user grid-item-user__usuario-data">
+                <p>cdaieta1</p>
+            </div>
+            <div class="div__grid-container-user__grid-item-user grid-item-user__nombre-data">
+                <p>cdaieta1</p>
+            </div>
+            <div class="div__grid-container-user__grid-item-user grid-item-user__apellido-data">
+                <p>cdaieta1</p>
+            </div>
+            <div class="div__grid-container-user__grid-item-user grid-item-user__fecha-data">
+                <p>cdaieta1</p>
+            </div>
+            <a href="#" class="div__grid-container-user__grid-item-user grid-item-user__change">
+                <i class="fas fa-pen-alt"></i>
+            </a>
+            <a href="#" class="div__grid-container-user__grid-item-user grid-item-user__delete">
+                <i class="far fa-trash-alt"></i>
+            </a>
+            <div class="div__grid-container-user__grid-item-user grid-item-user__usuario-data">
+                <p>cdaieta1</p>
+            </div>
+            <div class="div__grid-container-user__grid-item-user grid-item-user__nombre-data">
+                <p>cdaieta1</p>
+            </div>
+            <div class="div__grid-container-user__grid-item-user grid-item-user__apellido-data">
+                <p>cdaieta1</p>
+            </div>
+            <div class="div__grid-container-user__grid-item-user grid-item-user__fecha-data">
+                <p>cdaieta1</p>
+            </div>
+            <a href="#" class="div__grid-container-user__grid-item-user grid-item-user__change">
+                <i class="fas fa-pen-alt"></i>
+            </a>
+            <a href="#" class="div__grid-container-user__grid-item-user grid-item-user__delete">
+                <i class="far fa-trash-alt"></i>
+            </a>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* GRID USUARIOS */
+
+.div__grid-container-user {
+    display: flex;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(6, 150px);
+    grid-auto-rows: 50px;
+    grid-auto-flow: row;
+    background: none;
+    text-align: center;
+    margin: 75px auto;
+}
+
+.div__grid-container-user__grid-item-user {
+    border: 0.5px solid #232323;
+}
+
+.grid-item-user__usuario, .grid-item-user__nombre, .grid-item-user__apellido, .grid-item-user__fecha {
+    background: #b47cff;
+    color: #FFFFFF;
+}
+
+.grid-item-user__usuario-data, .grid-item-user__nombre-data, .grid-item-user__apellido-data, .grid-item-user__fecha-data {
+    background: #FFFFFF;
+}
+
+.grid-item-user__delete, .grid-item-user__change {
+    display: flex;
+    background: #3f1dcb;
+    color: #FFFFFF;
+    width: 25px;
+    height: 25px;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+    
+    margin: 12.5px 0 0 0;
+    border-radius: 100%;
+    padding:4px;
+}
+
+.grid-item-user__change {
+    margin-left: 30px;
+}
+
+
+
+
+.none-item-user {
+    grid-column: 5 / 7;
+    display: hidden;
+}
+
+
+/* GRID USUARIOS END */
