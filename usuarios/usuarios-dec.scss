@@ -18,7 +18,7 @@ body {
 
 .fheader {
     display: flex;
-    background: #002430;
+    background: $primary;
     font-weight: bold;
     width: 100%;
     max-width: 100%;
@@ -36,7 +36,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #2d4c59;
+    background: $primary-light;
     color: #FFFFFF;
     font-size: 30px;
     max-width: 100%;
@@ -49,13 +49,13 @@ body {
 }
 
 .user {
-    color: #cc9d20;
+    color: $secondary;
     font-size: 50px;
     margin-right: 40px;
     transition: .2s ease all;
 
     &:hover {
-        color: #ffce54;
+        color: $secondary-light;
         transition: .2s ease all;
     }
 }
@@ -75,10 +75,10 @@ body {
 }
 
 .form-btn {
-    background-color: #000007;
+    background-color: $primary-dark;
     border: none;
     border-radius: 2px;
-    color: #ffce54;
+    color: $secondary-light;
     padding: 7px;
 }
 
@@ -101,7 +101,7 @@ body {
     align-items: center;
     
     border: none;
-    background: #2d4c59;
+    background: $primary-light;
     color: #fff;
     font-size: 20px;
     position: relative;
@@ -112,7 +112,7 @@ body {
         transition: 1s color ease;
         color: #000;
         cursor: pointer;
-        border: 0.5px solid #976f00;
+        border: 0.5px solid $secondary-dark;
     }
     
     
@@ -208,12 +208,13 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: #5A90A6;
+        background: $primary;
 
         p {
             font-size: 27px;
             padding: 5px 20px;
             font-weight: bold;
+            color: $secondary-light;
         }
 
         .deact-modif {
@@ -232,7 +233,7 @@ body {
         }
     }
     .popup-icon {
-        color: #ffce54;
+        color: $secondary-light;
         margin-right: 20px;
         font-size: 30px;
         visibility: visible;
@@ -245,9 +246,7 @@ body {
     position: absolute;
     top: 30px;
     right: 300px;
-
-
-    color: #FFBE1D;
+    color: $secondary-light;
     font-size: 25px;
 }
 

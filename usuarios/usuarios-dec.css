@@ -170,12 +170,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #5A90A6;
+  background: #002430;
 }
 .popup .popup-header p {
   font-size: 27px;
   padding: 5px 20px;
   font-weight: bold;
+  color: #ffce54;
 }
 .popup .popup-header .deact-modif {
   visibility: hidden;
@@ -198,7 +199,7 @@ body {
   position: absolute;
   top: 30px;
   right: 300px;
-  color: #FFBE1D;
+  color: #ffce54;
   font-size: 25px;
 }
 

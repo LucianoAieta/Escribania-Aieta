@@ -23,7 +23,7 @@ body {
 
 .fheader {
     display: flex;
-    background: #002430;
+    background: $primary;
     font-weight: bold;
     width: 100%;
     max-width: 100%;
@@ -43,7 +43,7 @@ body {
 
 
 .sheader {
-    background: #2d4c59;
+    background: $primary-light;
     color: #FFFFFF;
     font-size: 30px;
     max-width: 100%;
@@ -58,14 +58,14 @@ body {
 }
 
 .new-write {
-    color: #cc9d20;
+    color: $secondary;
     font-size: 50px;
     padding-right: 40px;
     transition: .2s ease all;
 
     &:hover {
         transition: .2s ease all;
-        color: #ffce54;
+        color: $secondary-light;
     }
 }
 
@@ -110,7 +110,7 @@ body {
     justify-content: space-between;
     position: relative;
     border: none;
-    background: #2d4c59;
+    background: $primary-light;
     color: #fff;
     font-size: 20px;
     position: relative;
@@ -121,7 +121,7 @@ body {
         transition: 1s color ease;
         color: #000;
         cursor: pointer;
-        border: 0.5px solid #976f00;
+        border: 0.5px solid $secondary-dark;
     }
 
     &:before { 
@@ -151,20 +151,27 @@ body {
         transform: translateX(-150%);
     }
 
-    .line {
-        position: absolute;
-        right: 80px;
-    
-        width: 1px;
-        height: 100%;
-        background-color: #fff;
+
+    .amount {
+        &:after {
+                content: "";
+                position: absolute;
+                right: 100px;
+                top: 0;
+            
+                width: 1px;
+                height: 55px;
+                background-color: #fff;
+            
+        }
     }
     
-    
-    &:hover .line{
-        transition: 1s background ease ;
+    &:hover .amount:after{
+        transition: 1s background-color ease ;
         background: $secondary-dark;
     }
+    
+    
 
     .data, .amount {
         padding: 0 10px 0 10px;
@@ -196,8 +203,6 @@ body {
     flex-direction: column;
     width: 700px;
     height: 90%;
-
-
     transition: 2s all ease;
     background: #fff;
     position: relative;
@@ -205,12 +210,8 @@ body {
     left: 0;
     z-index: 30;
     overflow-y: auto;
-    
-    
     transition: 0.3s ease all;
-    
     transform: scale(0.7);
-    
     opacity: 0;
 
     &.active {
@@ -224,10 +225,10 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: #5A90A6;
+        background: $primary;
 
         .popup-icon {
-            color: #ffce54;
+            color: $secondary-light;
             margin-right: 20px;
             font-size: 30px;
             visibility: visible;
@@ -238,11 +239,7 @@ body {
             right: 50px;
         }
 
-        .deact-modif {
-            visibility: hidden;
-        }
-                
-        .deact-check {
+        .deact-modif, .deact-check {
             visibility: hidden;
         }
 
@@ -263,7 +260,7 @@ body {
             height: 80px;
         
             & p {
-                color: #ffce54;
+                color: $secondary-light;
                 position: absolute;
                 top: -6px;
                 left: 310px;
@@ -275,21 +272,16 @@ body {
                 font-weight: bold;
                 max-width: 400px;
                 padding: 5px;
-                color: #ffce54;
-                background: #5A90A6;
+                color: $secondary-light;
+                background: $primary;
                 width: max-content;
                 outline: none;
                 border-radius: 7px;
-            
-                &.inac {
-                    transition: all 0.4s ease;
-                    border: 1px solid #5A90A6;
-                }
+                transition: all .4s ease;
+                    border: 1px solid$primary;
                 
                 &.active {
-                    transition: all 0.4s ease;
-                    border: 1px solid #464646;
-                    
+                    border: 1px solid #fff;
                 }
             }
         }
@@ -307,17 +299,12 @@ body {
             margin: 20px 0 0 0;
             outline: none;
             border: 0px solid #fff;
+            transition: 0.4s ease all;
+            box-shadow: 0px 2px 5px 0 #000;
         
             &.active {
-                transition: 0.4s ease all;
                 box-shadow:0px 2px 10px 0 #000;
             }
-    
-            &.inac {
-                transition: 0.4s ease all;
-                box-shadow: 0px 2px 5px 0 #000;
-            }
-            
         }
     }
 }
@@ -472,4 +459,3 @@ body {
         }
     }
 }
-
