@@ -1,6 +1,6 @@
-var entry = document.getElementsByClassName("grid-item");
+let entry = document.getElementsByClassName("grid-item");
 
-var overlay = document.getElementById("overlay");
+let overlay = document.getElementById("overlay");
 
 
 
@@ -10,7 +10,7 @@ for (let position = 0; position < entry.length; position++) {
 
 
         // LLAMADO AL BACKEND
-        var idClickeado = clicked.target.id;
+        let idClickeado = clicked.target.id;
         
 
         // CREACION POPUP
@@ -48,16 +48,16 @@ for (let position = 0; position < entry.length; position++) {
         `;
         overlay.appendChild(data);
         
-        var popup = document.getElementById("popup");
+        let popup = document.getElementById("popup");
 
 
         // ANIMACION DE SALIDA
-        var exit = document.getElementById("exit");
-        exit.addEventListener('click', function (ex) {
+        let exit = document.getElementById("exit");
+        exit.addEventListener('click', function () {
 
             overlay.classList.remove("active");
             popup.classList.remove("active");
-            setTimeout(function (ex) {
+            setTimeout(function () {
 
                 data.remove();
             }, 0300);
@@ -69,11 +69,11 @@ for (let position = 0; position < entry.length; position++) {
         // MODIFICAR
 
 
-        var modif = document.getElementById("modif");
+        let modif = document.getElementById("modif");
         
         modif.addEventListener('click', function () {
             console.log("true");
-            var datas = Array.from(document.getElementsByClassName("body-data"));
+            let datas = Array.from(document.getElementsByClassName("body-data"));
 
             for (let inputs of datas) {
                 
@@ -82,7 +82,7 @@ for (let position = 0; position < entry.length; position++) {
                 inputs.readOnly = false;
             };
 
-            var check = document.getElementById("check");
+            let check = document.getElementById("check");
 
 
             modif.classList.add("deact-modif");
@@ -106,11 +106,11 @@ for (let position = 0; position < entry.length; position++) {
 
 
         // BORRAR CLIENTE
-        var delete_overlay = document.getElementById("delete-overlay");
-        var delete_icon = document.getElementById("delete");
+        let delete_overlay = document.getElementById("delete-overlay");
+        let delete_icon = document.getElementById("delete");
 
         delete_icon.addEventListener('click', function() {
-        var delete_popup = document.createElement("delete-popup");
+        let delete_popup = document.createElement("delete-popup");
         delete_popup.innerHTML = `
         <div class="delete-container" id="delete-container">
         <p class="delete-msg">¿Está seguro de querer borrar el cliente seleccionado?</p>
@@ -125,7 +125,7 @@ for (let position = 0; position < entry.length; position++) {
 
         delete_overlay.classList.add("active");
 
-        var delete_container = document.getElementById("delete-container");
+        let delete_container = document.getElementById("delete-container");
 
         setTimeout(function(){
             delete_container.classList.add("active");
@@ -134,7 +134,7 @@ for (let position = 0; position < entry.length; position++) {
 
         // NO BORRAR
 
-        var delete_no = document.getElementById("delete-no");
+        let delete_no = document.getElementById("delete-no");
 
         delete_no.addEventListener('click', function() {
             delete_container.classList.remove("active");
@@ -147,7 +147,7 @@ for (let position = 0; position < entry.length; position++) {
 
         // SI BORRAR 
 
-        var delete_yes = document.getElementById("delete-yes");
+        let delete_yes = document.getElementById("delete-yes");
         
 
         delete_yes.addEventListener('click', function () {

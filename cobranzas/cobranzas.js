@@ -1,6 +1,6 @@
-var entry = document.getElementsByClassName("grid-item");
+let entry = document.getElementsByClassName("grid-item");
 
-var overlay = document.getElementById("overlay");
+let overlay = document.getElementById("overlay");
 
 
 
@@ -10,7 +10,7 @@ for (let position = 0; position < entry.length; position++) {
 
 
         // LLAMADO AL BACKEND
-        var idClickeado = clicked.target.id;
+        let idClickeado = clicked.target.id;
         
 
         // CREACION POPUP
@@ -53,87 +53,72 @@ for (let position = 0; position < entry.length; position++) {
         `;
         overlay.appendChild(data);
         
-        var popup = document.getElementById("popup");
-        var value_write = document.getElementById("value-write");
+        let popup = document.getElementById("popup");
+        let value_write = document.getElementById("value-write");
 
+        function addClass(element_tomodify) {
+            element_tomodify.classList.add("active");
+            element_tomodify.readOnly = false;
+        };
+
+        function removeClass(element_tomodify) {
+            element_tomodify.classList.remove("active");
+            element_tomodify.readOnly = true;
+        };
 
         // ANIMACION DE SALIDA
-        var exit = document.getElementById("exit");
+        let exit = document.getElementById("exit");
         
-        
-        exit.addEventListener('click', function (ex) {
+        exit.addEventListener('click', function () {
 
-            overlay.classList.remove("active");
-            popup.classList.remove("active");
+            removeClass(overlay);
+            removeClass(popup);
             
             value_write.classList.remove("act")
-            setTimeout(function (ex) {
+            setTimeout(function () {
                 
                 data.remove();
             }, 0300);
 
-
         });
-
 
         // MODIFICAR
 
-        var escritura = document.getElementById("textarea");
-        var title = document.getElementById("title");
-        var modif = document.getElementById("modif");
-        var input_price = document.getElementById("input-price");
-        
+        let escritura = document.getElementById("textarea");
+        let title = document.getElementById("title");
+        let modif = document.getElementById("modif");
+        let input_price = document.getElementById("input-price");
+
         modif.addEventListener('click', function () {
+            addClass(title);
+            addClass(escritura);
+            addClass(value_write);
+            addClass(input_price);
 
-            
-            title.readOnly = false;
-            title.classList.add("active");
-            title.classList.remove("inac");
-
-            escritura.readOnly = false;
-            escritura.classList.add("active");
-            escritura.classList.remove("inac")
-
-            
-            value_write.classList.add("active");
-            input_price.classList.add("active")
-            input_price.readOnly = false;
-            
-
-            var check = document.getElementById("check");
-
+            let check = document.getElementById("check");
 
             modif.classList.add("deact-modif");
             check.classList.remove("deact-check");
 
             check.addEventListener('click', function() {
-                title.readOnly = true;
-                title.classList.remove("active");
-                title.classList.add("inac");
-
-                escritura.readOnly = true;
-                escritura.classList.remove("active");
-                escritura.classList.add("inac")
-
-                
-                input_price.readOnly = true;
-                value_write.classList.remove("active");
-                input_price.classList.remove("active")
+                removeClass(title);
+                removeClass(escritura);
+                removeClass(value_write);
+                removeClass(input_price);
 
                 check.classList.add("deact-check");
                 modif.classList.remove("deact-modif");
             });
-            
         });
         
 
 
         // BORRAR CLIENTE
-        var delete_overlay = document.getElementById("delete-overlay");
-        var delete_icon = document.getElementById("delete");
+        let delete_overlay = document.getElementById("delete-overlay");
+        let delete_icon = document.getElementById("delete");
 
         delete_icon.addEventListener('click', function() {
-        var delete_popup = document.createElement("delete-popup");
+        let delete_popup = document.createElement("delete-popup");
         delete_popup.innerHTML = `
         <div class="delete-container" id="delete-container">
         <p class="delete-msg">¿Está seguro de querer borrar la cobranza seleccionada?</p>
@@ -146,9 +131,9 @@ for (let position = 0; position < entry.length; position++) {
 
         delete_overlay.appendChild(delete_popup);
 
-        delete_overlay.classList.add("active");
+        addClass(delete_overlay);
 
-        var delete_container = document.getElementById("delete-container");
+        let delete_container = document.getElementById("delete-container");
 
         setTimeout(function(){
             delete_container.classList.add("active");
@@ -157,7 +142,7 @@ for (let position = 0; position < entry.length; position++) {
 
         // NO BORRAR
 
-        var delete_no = document.getElementById("delete-no");
+        let delete_no = document.getElementById("delete-no");
 
         delete_no.addEventListener('click', function() {
             delete_container.classList.remove("active");
@@ -170,29 +155,29 @@ for (let position = 0; position < entry.length; position++) {
 
         // SI BORRAR 
 
-        var delete_yes = document.getElementById("delete-yes");
+        let delete_yes = document.getElementById("delete-yes");
         
 
         delete_yes.addEventListener('click', function () {
 
             // POPUP DELETE
-            delete_container.classList.remove("active");
+            removeClass(delete_container)
             setTimeout(function() {
                 delete_popup.remove();
             },0200);
 
             // POPUP CLIENTE
             setTimeout(function(){
-                delete_overlay.classList.remove("active");
+                removeClass(delete_overlay)
             }, 0220);
 
             setTimeout(function() {
-                popup.classList.remove("active")
+                removeClass(popup)
                 value_write.classList.remove("act")
             }, 0500);
 
             setTimeout(function(){
-                overlay.classList.remove("active");
+                removeClass(overlay)
             }, 0750);
 
             setTimeout(function(){
@@ -215,15 +200,14 @@ for (let position = 0; position < entry.length; position++) {
 
     // ANIMACION DE ENTRADA
     
-    element.addEventListener('click', function (en) {
-        setTimeout(function (en) {
+    element.addEventListener('click', function () {
+        setTimeout(function () {
 
             popup.classList.add("active");
             
-            
         }, 0100);
         setTimeout(function(){
-            var value_write = document.getElementById("value-write");
+            let value_write = document.getElementById("value-write");
             value_write.classList.add("act");
         }, 0400)
     });
