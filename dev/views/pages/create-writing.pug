@@ -1,0 +1,17 @@
+include ../mixins/_head-simple
+include ../mixins/_header-create
+include ../mixins/_body-create
+
+doctype html
+html(lang="es")
+    head
+        //- Head simple
+        +head('create-b.css')
+        title Crear una nueva escritura - Escribanía Silva Wapenka
+    body
+        //- Header simple (dirige a index / manage)
+        +header('writings.html', 'Escrituras')
+        //- Body común (tipo a: clientes y usuarios / tipo b: escrituras y cobranzas)
+        +body('b', 'escritura')
+        //- Script (tipo a: clientes y usuarios / tipo b: escrituras y cobranzas)
+        script(src='../js/create-b.js')

@@ -1,0 +1,19 @@
+include ../mixins/_header-manage
+include ../mixins/_head-simple
+
+doctype html
+html(lang='es')
+    head
+        //- head simple (viewport,)
+        +head('manage.css')
+        title Clientes - Escribanía Silva Wapenka
+    body
+        //- Header común y corriente
+        +header('Clientes', 'create-client.html')
+        //- Sección donde se controlan los usuarios
+        include ../includes/_body-manage
+        //- <div> donde se inserta la tarjeta contenedora con los datos de un usuario
+        #overlay.overlay--card
+        //- Scripts (tipo a: usuarios y clientes / tipo b: escrituras y cobranzas)
+        script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
+        script(src='../js/manage-a.js')

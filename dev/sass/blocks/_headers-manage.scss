@@ -1,0 +1,42 @@
+.header--first {
+    display: flex;
+    background: $primary;
+    width: 100%;
+    max-width: 100%;
+    color: #fff;
+
+    .header__title--first {
+        font-weight: 600;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+}
+
+.header--second {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $primary-light;
+    color: #FFFFFF;
+    font-size: 30px;
+    max-width: 100%;
+
+    .header__title--second {
+    
+        margin: 0;
+        padding: 20px 50px;
+    }
+
+    .header__icon--second {
+        color: $secondary;
+        font-size: 50px;
+        margin-right: 40px;
+        transition: .2s ease all;
+    
+        &:hover {
+            color: $secondary-light;
+            transition: .2s ease all;
+        }
+    }
+}

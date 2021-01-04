@@ -1,0 +1,17 @@
+include ../mixins/_head-simple
+include ../mixins/_header-create
+include ../mixins/_body-create
+
+doctype html
+html(lang="es")
+    head
+        //- Head simple
+        +head('create-a.css')
+        title Crear un nuevo Cliente - Escribanía Silva Wapenka
+    body
+        //- Header simple (dirige a index / manage)
+        +header('clients.html', 'Clientes')
+        //- Body común (tipo a: clientes y usuarios / tipo b: escrituras y cobranzas)
+        +body('a', 'cliente')
+        //- Script (tipo a: clientes y usuarios / tipo b: escrituras y cobranzas)
+        script(src='../js/create-a.js')
