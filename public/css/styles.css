@@ -309,7 +309,6 @@ table {
 				left: 0;
 				z-index: 100;
 				border-bottom: 0.0187em solid #EFEFEF;
-				font-size: 16px;
 }
 .molecule-header-main .title-logo {
 				display: flex;
@@ -330,11 +329,35 @@ table {
 .molecule-header-main .title-logo .logo {
 				width: 4em;
 }
+@media (min-width: 1440px) and (max-width: 1920px) {
+				.molecule-header-main {
+								font-size: 22px;
+				}
+}
+@media (min-width: 1280px) and (max-width: 1366px) {
+				.molecule-header-main {
+								font-size: 16px;
+				}
+}
+@media (min-width: 480px) and (max-width: 768px) {
+				.molecule-header-main {
+								font-size: 14px;
+				}
+}
+@media (min-width: 360px) and (max-width: 480px) {
+				.molecule-header-main {
+								font-size: 12px;
+				}
+}
+@media (max-width: 360px) {
+				.molecule-header-main {
+								font-size: 8px;
+				}
+}
 
 .molecule-index-card {
 				width: 27.9844em;
 				box-shadow: 0 0.125em 0.1875em 0 #BDBDBD;
-				font-size: 16px;
 }
 .molecule-index-card .img {
 				object-fit: cover;
@@ -352,7 +375,7 @@ table {
 .molecule-index-card .container .title {
 				font-weight: 300;
 				font-size: 1.85em;
-				line-height: 2rem;
+				line-height: 1em;
 				color: #002430;
 }
 
@@ -366,16 +389,40 @@ table {
 				align-items: center;
 				position: absolute;
 				right: 0;
-				margin-right: 1rem;
+				margin-right: 1em;
 				transform: scaleY(0);
 				transform-origin: 0% 0%;
 				transition: 0.3s ease transform;
 				padding: 0 0.5em;
 }
+@media (min-width: 1440px) and (max-width: 1920px) {
+				.molecule-menu-options {
+								font-size: 22px;
+				}
+}
+@media (min-width: 1280px) and (max-width: 1366px) {
+				.molecule-menu-options {
+								font-size: 16px;
+				}
+}
+@media (min-width: 480px) and (max-width: 768px) {
+				.molecule-menu-options {
+								font-size: 14px;
+				}
+}
+@media (min-width: 360px) and (max-width: 480px) {
+				.molecule-menu-options {
+								font-size: 12px;
+				}
+}
+@media (max-width: 360px) {
+				.molecule-menu-options {
+								font-size: 8px;
+				}
+}
 
 /* Organisms */
 .organism-index-card-list {
-				font-size: 16px;
 				display: grid;
 				grid-template-rows: repeat(auto-fit);
 				grid-template-columns: repeat(2, 27.9844em);
@@ -384,6 +431,34 @@ table {
 				align-self: center;
 				margin: 0 auto;
 				gap: 3em 6em;
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+				.organism-index-card-list {
+								font-size: 22px;
+				}
+}
+@media (min-width: 1280px) and (max-width: 1366px) {
+				.organism-index-card-list {
+								font-size: 16px;
+				}
+}
+@media (min-width: 480px) and (max-width: 768px) {
+				.organism-index-card-list {
+								font-size: 14px;
+								grid-template-columns: repeat(auto-fill, 27.9844em);
+				}
+}
+@media (min-width: 360px) and (max-width: 480px) {
+				.organism-index-card-list {
+								font-size: 12px;
+								grid-template-columns: repeat(auto-fill, 27.9844em);
+				}
+}
+@media (max-width: 360px) {
+				.organism-index-card-list {
+								font-size: 10px;
+								grid-template-columns: repeat(auto-fill, 27.9844em);
+				}
 }
 
 /* Templates */
@@ -398,4 +473,14 @@ table {
 				align-content: center;
 				align-items: center;
 				margin: 2em 0;
+}
+@media (max-width: 1920px) and (min-width: 1440px) {
+				.template-cards-container {
+								margin: 3em 0;
+				}
+}
+@media (max-width: 360px) {
+				.template-cards-container {
+								margin: 1em 0;
+				}
 }

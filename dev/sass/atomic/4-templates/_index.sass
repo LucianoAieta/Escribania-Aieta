@@ -8,3 +8,7 @@
     align-content: center
     align-items: center
     margin: 2em 0
+    @include media ('<=LGdesktop', '>=1440px')
+        margin: 3em 0
+    @include media('<=phone')
+        margin: 1em 0
