@@ -1,0 +1,35 @@
+%input
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    padding: .5em
+    width: fit-content
+    height: fit-content
+    line-height: 1em
+    font-size: 1em
+    outline: none
+    
+.atom-input-text-primary-outline
+    @extend %input
+
+.atom-input-text-primary-outline
+    border: 1px solid $primary
+    box-sizing: border-box
+    border-radius: 10px
+
+    flex: none
+    order: 0
+    flex-grow: 0
+    transition: background-color .4s ease, color .4s ease
+
+    color: $primary
+    
+    &::placeholder
+        color: $primary
+        
+    &:focus
+        background-color: $primary
+        color: $white
+        &::placeholder
+            color: $white

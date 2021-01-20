@@ -1,31 +1,43 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script src="https://kit.fontawesome.com/e28906f798.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/normalize.css"/>
-    <link rel="stylesheet" href="../css/base.css"/>
-    <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="stylesheet" href="../css/styles.css"/>
     <title>Inicio - Escribanía Silva Wapenka</title>
   </head>
   <body>
-    <header class="header">
-      <div class="header__container--first"><img class="header__icon--first" src="../assets/icons/sw-logo-secondary.png" alt="Logo Escribanía Silva Wapenka">
-        <h1 class="header__title--first">Escribanía Silva Wapenka</h1>
+    <div class="template-header">
+      <div class="molecule-header-main">
+        <div class="title-logo"><img class="logo" src="../assets/icons/logo-sw-black.png"/>
+          <h1 class="title">Escribanía Silva Wapenka</h1>
+        </div><img class="atom-icon-extra-large" src="../assets/icons/svg/menu-line.svg"/>
       </div>
-      <div class="header__container--second"><a class="fas fa-user-tie header__icon--second" href="./users.html"></a>
-        <p class="header__icon-text--second">Usuarios</p>
+    </div>
+    <div class="template-cards-container">
+      <div class="organism-index-card-list">
+        <div class="molecule-index-card"><img class="img" src="../assets/images/users.jpg"/>
+          <div class="container">
+            <p class="title">Usuarios</p><a class="atom-button-primary-outline" href="#">Administrar</a>
+          </div>
+        </div>
+        <div class="molecule-index-card"><img class="img" src="../assets/images/clients.jpg"/>
+          <div class="container">
+            <p class="title">Clientes</p><a class="atom-button-primary-outline" href="#">Administrar</a>
+          </div>
+        </div>
+        <div class="molecule-index-card"><img class="img" src="../assets/images/writing.jpg"/>
+          <div class="container">
+            <p class="title">Escrituras</p><a class="atom-button-primary-outline" href="#">Administrar</a>
+          </div>
+        </div>
+        <div class="molecule-index-card"><img class="img" src="../assets/images/collection.jpg"/>
+          <div class="container">
+            <p class="title">Cobranzas</p><a class="atom-button-primary-outline" href="#">Administrar</a>
+          </div>
+        </div>
       </div>
-    </header>
-    <article>
-      <section class="section__container"><a class="card clientes" href="./clients.html"><i class="card__icon fas fa-users"></i>
-          <p class="card__title">Clientes</p>
-          <p class="card__description">Ingrese para gestionar los Clientes de la Escribanía.</p></a><a class="card escrituras" href="./writings.html"><i class="card__icon fas fa-scroll"></i>
-          <p class="card__title">Escrituras</p>
-          <p class="card__description">Ingrese a esta seccion para gestionar las Escrituras de los Clientes.</p></a><a class="card pagos" href="./collections.html"><i class="card__icon fas fa-dollar-sign"></i>
-          <p class="card__title">Cobranzas</p>
-          <p class="card__description">Ingrese para gestionar las cobranzas de la Escribanía.</p></a></section>
-    </article>
+    </div>
+    <script src="../js/index.js"></script>
   </body>
 </html>

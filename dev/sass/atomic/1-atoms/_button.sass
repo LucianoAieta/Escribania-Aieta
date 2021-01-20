@@ -1,0 +1,133 @@
+%button
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    padding: .5em
+    width: fit-content
+    height: fit-content
+    line-height: 1em
+    cursor: pointer
+    border-radius: 1em
+    text-decoration: none
+
+.atom-button-primary-outline,
+.atom-button-primary-filled,
+.atom-button-primary-empty,
+.atom-button-secondary-outline,
+.atom-button-secondary-filled,
+.atom-button-secondary-empty,
+.atom-button-green-outline,
+.atom-button-green-filled,
+.atom-button-green-empty,
+.atom-button-red-outline,
+.atom-button-red-filled,
+.atom-button-red-empty,
+.atom-button-orange-outline,
+.atom-button-orange-filled,
+.atom-button-orange-empty
+    @extend %button
+
+/* Primary
+.atom-button-primary-outline
+    color: $primary
+    border: 1px solid $primary
+    box-sizing: border-box
+    transition: background-color .3s ease, color .3s ease
+    &:hover
+        background-color: $primary
+        color: $white
+
+.atom-button-primary-filled
+    background: $primary
+    color: $white
+
+.atom-button-primary-empty
+    color: $primary
+    &:hover
+        color: $white
+        background-color: $primary
+
+/* Secondary
+.atom-button-secondary-outline
+    color: $secondary
+    border: 1px solid $secondary
+    transition: background-color .3s ease, color .3s ease
+    &:hover
+        background-color: $secondary
+        color: $white
+
+.atom-button-secondary-filled
+    border: 1px solid $primary-dark
+    background: $secondary-light
+    color: $primary-dark
+
+.atom-button-secondary-empty
+    transition: background-color .4s ease, color .4s ease, border-color .5s ease
+    border: 1px solid transparent
+    color: $secondary-light
+    &:hover
+        background: $secondary-light
+        color: $primary-dark
+        border-color: $primary-dark
+
+/* Green
+.atom-button-green-outline
+    color: $green
+    border: 1px solid $green
+    transition: background-color .3s ease, color .3s ease
+    &:hover
+        background-color: $green
+        color: $white
+
+.atom-button-green-filled
+    background: $green
+    color: $white
+
+.atom-button-green-empty
+    transition: background-color .4s ease, color .4s ease
+    color: $green
+    &:hover
+        background: $green
+        color: $white
+
+/* Red
+.atom-button-red-outline
+    color: $red
+    border: 1px solid $red
+    transition: background-color .3s ease, color .3s ease
+    &:hover
+        background-color: $red
+        color: $white
+
+.atom-button-red-filled
+    background: $red
+    color: $white
+
+.atom-button-red-empty
+    transition: background-color .4s ease, color .4s ease
+    color: $red
+    &:hover
+        background: $red
+        color: $white
+
+/* Orange
+
+.atom-button-orange-outline
+    color: $orange
+    border: 1px solid $orange
+    transition: background-color .3s ease, color .3s ease
+    &:hover
+        background-color: $orange
+        color: $white
+
+.atom-button-orange-filled
+    background: $orange
+    color: $white
+
+.atom-button-orange-empty
+    transition: background-color .4s ease, color .4s ease
+    color: $orange
+    &:hover
+        background: $orange
+        color: $white

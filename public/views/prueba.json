@@ -1,9 +1,0 @@
-{
-    "escrituras" : [
-        {"title" : "Acción YPF", "amount" : "250000", "content" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consequatur ea quas cumque modi culpa atque eaque exercitationem corrupti ducimus quo animi, sit quaerat est quidem facere enim odit quos?"},
-        {"title" : "Acciones Apple", "amount" : "850000", "content" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consequatur ea quas cumque modi culpa atque eaque exercitationem corrupti ducimus quo animi, sit quaerat est quidem facere enim odit quos?"},
-        {"title" : "Cedears Amazon", "amount" : "10000", "content" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consequatur ea quas cumque modi culpa atque eaque exercitationem corrupti ducimus quo animi, sit quaerat est quidem facere enim odit quos?"},
-        {"title" : "Propiedad A", "amount" : "1550000", "content" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consequatur ea quas cumque modi culpa atque eaque exercitationem corrupti ducimus quo animi, sit quaerat est quidem facere enim odit quos?"},
-        {"title" : "Propiedad B", "amount" : "5000000", "content" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consequatur ea quas cumque modi culpa atque eaque exercitationem corrupti ducimus quo animi, sit quaerat est quidem facere enim odit quos?"}
-    ]
-}

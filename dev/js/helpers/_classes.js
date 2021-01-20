@@ -1,4 +1,3 @@
-// FUNCIONES PARA AGREGAR Y SACAR CLASES
 const addClass = (e) => {
     e.classList.add("active");
     e.readOnly = false;
