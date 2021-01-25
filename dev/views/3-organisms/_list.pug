@@ -1,0 +1,15 @@
+include ../1-atoms/_item
+include ../2-molecules/_card
+
+mixin list(type, times)
+	if type === 'crud'
+		.organism-crud-list
+			-var i = 0;
+			while i < times
+				+item('crud', 'Name', 'Amount')
+				-i++
+	if type === 'index'
+		+card('index', 'users.jpg', 'Usuarios')
+		+card('index', 'clients.jpg', 'Clientes', 'clients.html')
+		+card('index', 'writing.jpg', 'Escrituras')
+		+card('index', 'collection.jpg', 'Cobranzas')

@@ -1,0 +1,26 @@
+.template-crud
+    display: grid
+    grid-template: repeat(autofill)
+    align-items: center
+
+    .template-header
+        position: sticky
+        top: 0
+        left: 0
+    .template-list
+        display: flex
+        align-content: center
+        align-items: center
+        justify-content: center
+        justify-items: center
+        margin: 2em auto
+        @include media('>=1440px', '<=LGdesktop',)
+            font-size: 24px
+        @include media('>=1280px', '<=desktop',)
+            font-size: 16px
+        @include media('>=480px', '<=tablet')
+            font-size: 10px
+        @include media('>=phone', '<=480px')
+            font-size: 8px
+        @include media('<=phone')
+            font-size: 8px

@@ -1,0 +1,12 @@
+include ../1-atoms/_icons
+include ../1-atoms/_input
+include ../2-molecules/_form
+
+mixin nav(type='default')
+    if type === 'default'
+        +icon('extra-large', 'menu-line')
+    if type === 'crud'
+        .organism-nav-icons
+            +form('crud')
+            +icon('extra-large', 'plus', 'create')
+            +icon('extra-large', 'menu-line', 'menu')

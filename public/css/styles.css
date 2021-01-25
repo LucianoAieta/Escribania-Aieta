@@ -60,6 +60,10 @@ table {
 				border-spacing: 0;
 }
 
+a {
+				text-decoration: none;
+}
+
 :root {
 				font-family: "Roboto", sans-serif;
 }
@@ -278,6 +282,51 @@ table {
 				cursor: pointer;
 }
 
+.logo-small {
+				width: 3em;
+}
+
+.logo-medium {
+				width: 4em;
+}
+
+.logo-large {
+				width: 5em;
+}
+
+.atom-title-large {
+				font-weight: 300;
+				font-size: 2em;
+				color: #002430;
+				line-height: 1em;
+}
+
+.atom-title-medium {
+				font-weight: 300;
+				font-size: 1.5em;
+				color: #002430;
+				line-height: 1em;
+}
+
+.atom-title-small {
+				font-weight: 300;
+				font-size: 1.3em;
+				color: #002430;
+				line-height: 1em;
+}
+
+.atom-text-medium {
+				font-weight: 300;
+				font-size: 1.5em;
+				line-height: 1.5em;
+}
+
+.atom-text-small {
+				font-weight: 300;
+				font-size: 1em;
+				line-height: 1.1875em;
+}
+
 .atom-options-item {
 				display: flex;
 				flex-direction: row;
@@ -293,66 +342,11 @@ table {
 }
 
 /* Molecules */
-.molecule-header-main {
+.molecule-form-search {
+				height: 100%;
 				display: flex;
-				flex-direction: row;
 				justify-content: space-between;
 				align-items: center;
-				box-sizing: border-box;
-				padding: 1em 2em 1em 1em;
-				width: 100%;
-				height: -webkit-fit-content;
-				height: fit-content;
-				background: #ffffff;
-				position: sticky;
-				top: 0;
-				left: 0;
-				z-index: 100;
-				border-bottom: 0.0187em solid #EFEFEF;
-}
-.molecule-header-main .title-logo {
-				display: flex;
-				flex-direction: row;
-				justify-content: center;
-				align-items: center;
-				flex: none;
-				order: 0;
-				flex-grow: 0;
-}
-.molecule-header-main .title-logo .title {
-				font-weight: 300;
-				font-size: 2em;
-				padding: 0 0 0 0.5em;
-				color: #002430;
-				line-height: 1em;
-}
-.molecule-header-main .title-logo .logo {
-				width: 4em;
-}
-@media (min-width: 1440px) and (max-width: 1920px) {
-				.molecule-header-main {
-								font-size: 22px;
-				}
-}
-@media (min-width: 1280px) and (max-width: 1366px) {
-				.molecule-header-main {
-								font-size: 16px;
-				}
-}
-@media (min-width: 480px) and (max-width: 768px) {
-				.molecule-header-main {
-								font-size: 14px;
-				}
-}
-@media (min-width: 360px) and (max-width: 480px) {
-				.molecule-header-main {
-								font-size: 12px;
-				}
-}
-@media (max-width: 360px) {
-				.molecule-header-main {
-								font-size: 8px;
-				}
 }
 
 .molecule-index-card {
@@ -371,12 +365,6 @@ table {
 				justify-content: space-between;
 				align-items: flex-start;
 				padding: 0.8em 1em;
-}
-.molecule-index-card .container .title {
-				font-weight: 300;
-				font-size: 1.85em;
-				line-height: 1em;
-				color: #002430;
 }
 
 .molecule-menu-options {
@@ -417,11 +405,160 @@ table {
 }
 @media (max-width: 360px) {
 				.molecule-menu-options {
-								font-size: 8px;
+								font-size: 10px;
 				}
 }
 
+.molecule-title-logo {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				flex: none;
+				order: 0;
+				flex-grow: 0;
+}
+
+.molecule-crud-item {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-self: stretch;
+				align-items: center;
+				padding: 1em;
+				width: 30em;
+				height: 2em;
+				border: 0.0625em solid transparent;
+				transition: background-color 0.3s ease, border-color 0.3s ease;
+				color: #3B3A3A;
+}
+.molecule-crud-item:hover {
+				background-color: #2d4c59;
+				color: #ffffff;
+				border-color: #000007;
+}
+
 /* Organisms */
+.organism-nav-icons {
+				display: flex;
+}
+
+.organism-header-main {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				box-sizing: border-box;
+				padding: 1em 2em 1em 1em;
+				width: 100%;
+				height: -webkit-fit-content;
+				height: fit-content;
+				background: #ffffff;
+				position: sticky;
+				top: 0;
+				left: 0;
+				z-index: 100;
+				border-bottom: 0.0187em solid #EFEFEF;
+				/* Search form styles */
+}
+.organism-header-main .atom-title-large {
+				padding: 0 0 0 0.5em;
+}
+.organism-header-main #create,
+.organism-header-main .molecule-form-search {
+				margin-right: 2em;
+}
+.organism-header-main #search-input, .organism-header-main #minimize {
+				opacity: 0;
+				display: none;
+				transition: all 0.3s ease;
+}
+.organism-header-main #search-input {
+				height: 2em;
+				margin-right: 0.5em;
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+				.organism-header-main {
+								font-size: 22px;
+				}
+}
+@media (min-width: 1280px) and (max-width: 1366px) {
+				.organism-header-main {
+								font-size: 16px;
+				}
+}
+@media (min-width: 480px) and (max-width: 768px) {
+				.organism-header-main {
+								font-size: 14px;
+				}
+}
+@media (min-width: 360px) and (max-width: 480px) {
+				.organism-header-main {
+								font-size: 10px;
+				}
+}
+@media (max-width: 360px) {
+				.organism-header-main {
+								font-size: 7px;
+				}
+}
+
+.organism-crud-list {
+				display: grid;
+				grid-template-rows: repeat(auto-fill, 4em);
+				grid-template-columns: repeat(2, 32em);
+				gap: 0.5em 5em;
+}
+.organism-crud-list:before {
+				content: "";
+				position: fixed;
+				top: 8em;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 0.0625em;
+				height: 75%;
+				border-radius: 0.0625em;
+				background-color: #E1E1E1;
+				opacity: 1;
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+				.organism-crud-list {
+								font-size: 20px;
+				}
+}
+@media (min-width: 1280px) and (max-width: 1366px) {
+				.organism-crud-list {
+								font-size: 16px;
+				}
+}
+@media (min-width: 480px) and (max-width: 768px) {
+				.organism-crud-list {
+								font-size: 14px;
+								grid-template-columns: repeat(auto-fill, 32em);
+				}
+				.organism-crud-list::before {
+								opacity: 0;
+				}
+}
+@media (min-width: 360px) and (max-width: 480px) {
+				.organism-crud-list {
+								font-size: 12px;
+								grid-template-columns: repeat(auto-fill, 32em);
+				}
+				.organism-crud-list::before {
+								opacity: 0;
+				}
+}
+@media (max-width: 360px) {
+				.organism-crud-list {
+								font-size: 10px;
+								grid-template-columns: repeat(auto-fill, 32em);
+				}
+				.organism-crud-list::before {
+								opacity: 0;
+				}
+}
+
 .organism-index-card-list {
 				display: grid;
 				grid-template-rows: repeat(auto-fit);
@@ -462,25 +599,68 @@ table {
 }
 
 /* Templates */
-.template-header {
+.template-index .template-header {
 				position: sticky;
 				top: 0;
 				left: 0;
 }
-
-.template-cards-container {
+.template-index .template-cards-container {
 				display: flex;
 				align-content: center;
 				align-items: center;
 				margin: 2em 0;
 }
 @media (max-width: 1920px) and (min-width: 1440px) {
-				.template-cards-container {
+				.template-index .template-cards-container {
 								margin: 3em 0;
 				}
 }
 @media (max-width: 360px) {
-				.template-cards-container {
+				.template-index .template-cards-container {
 								margin: 1em 0;
+				}
+}
+
+.template-crud {
+				display: grid;
+				grid-template: repeat(autofill);
+				align-items: center;
+}
+.template-crud .template-header {
+				position: sticky;
+				top: 0;
+				left: 0;
+}
+.template-crud .template-list {
+				display: flex;
+				align-content: center;
+				align-items: center;
+				justify-content: center;
+				justify-items: center;
+				margin: 2em auto;
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+				.template-crud .template-list {
+								font-size: 24px;
+				}
+}
+@media (min-width: 1280px) and (max-width: 1366px) {
+				.template-crud .template-list {
+								font-size: 16px;
+				}
+}
+@media (min-width: 480px) and (max-width: 768px) {
+				.template-crud .template-list {
+								font-size: 10px;
+				}
+}
+@media (min-width: 360px) and (max-width: 480px) {
+				.template-crud .template-list {
+								font-size: 8px;
+				}
+}
+@media (max-width: 360px) {
+				.template-crud .template-list {
+								font-size: 8px;
 				}
 }

@@ -1,9 +1,9 @@
-import {Menu} from '../modules/_index'
+import {Menu} from '../modules/_menu'
 
 let menu = document.querySelector('.template-header .atom-icon-extra-large')
-let options = () => document.querySelector('.molecule-menu-options');+
-
+let options = () => document.querySelector('.molecule-menu-options');
+console.log(options())
 menu.addEventListener('click', () => {
-    if (options() == undefined) Menu.create();
+    if (options() === null) Menu.create();
     else Menu.remove(options());
 });

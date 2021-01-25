@@ -1,8 +1,0 @@
-include ../../1-atoms/_button
-
-mixin indexCard(url, name)
-    .molecule-index-card
-        img.img(src=`../assets/images/${url}`)
-        .container
-            p.title=name
-            +button('primary', 'outline', 'Administrar')

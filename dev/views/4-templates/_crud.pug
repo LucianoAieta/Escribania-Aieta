@@ -1,0 +1,9 @@
+include ../3-organisms/_header
+include ../3-organisms/_list
+
+mixin bigHeader()
+    .template-header
+        +header('crud')
+mixin crudList(times)
+    .template-list
+        +list('crud', times)

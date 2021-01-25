@@ -6,15 +6,28 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 
-let menu = document.querySelector('.template-header .atom-icon-extra-large');
 
+
+/* Menú de navegación */
+let menu = document.querySelector('#menu');
 let options = () => document.querySelector('.molecule-menu-options');
 
-console.log(options());
 menu.addEventListener('click', () => {
-  if (options() === null) _modules_menu__WEBPACK_IMPORTED_MODULE_0__.Menu.create();else _modules_menu__WEBPACK_IMPORTED_MODULE_0__.Menu.remove(options());
+    if (options() === null) _modules_menu__WEBPACK_IMPORTED_MODULE_0__.Menu.create();
+    else _modules_menu__WEBPACK_IMPORTED_MODULE_0__.Menu.remove(options());
 });
+
+/* Buscador */
+let search_button = document.querySelector('#search');
+let search_input = document.querySelector('#search-input');
+let minimize = document.querySelector('#minimize');
+
+let search = new _modules_search__WEBPACK_IMPORTED_MODULE_1__.Search(search_button, search_input, minimize)
+
+search_button.addEventListener('click', () => search.showInput());
+minimize.addEventListener('click', () => search.hideInput());
 
 /***/ }),
 /* 1 */
@@ -25,29 +38,64 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Menu": () => /* binding */ Menu
 /* harmony export */ });
 class Menu {
-  static create() {
-    let header = document.querySelector('.template-header');
-    let options = document.createElement('DIV');
-    options.innerHTML = `
+    static create() {
+        let header = document.querySelector('.template-header');
+        let options = document.createElement('DIV');
+        options.innerHTML = `
             <a href='#' class='atom-options-item'>Mi cuenta</a>
             <a href='#' class='atom-options-item'>Agenda</a>
             <a href='#' class='atom-options-item'>Calendario</a>
             <a href='#' class='atom-options-item'>Ajustes</a>
             <a href='#' class='atom-options-item'>Cerrar sesión</a>
         `;
-    options.classList.add('molecule-menu-options');
-    setTimeout(() => options.style.transform = 'scaleY(1)', 100);
-    header.appendChild(options);
-  }
+        options.classList.add('molecule-menu-options');
+        setTimeout(() => options.style.transform = 'scaleY(1)', 100);
+        header.appendChild(options);
+    };
+    static remove(options) {
+        options.style.transform = 'scaleY(0)'
+        setTimeout(() => options.remove(), 300);
+    };
+};
 
-  static remove(options) {
-    options.style.transform = 'scaleY(0)';
-    setTimeout(() => options.remove(), 300);
-  }
 
-}
 
-;
+/***/ }),
+/* 2 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Search": () => /* binding */ Search
+/* harmony export */ });
+class Search {
+    constructor (search, input, minimize) {
+        this.search = search;
+        this.input = input;
+        this.minimize = minimize;
+    };
+    showInput() {
+        let header = document.querySelector('.organism-header-main .atom-title-large');
+        const show = item => {
+            if (window.screen.availWidth <= 768) header.style.display = 'none';
+            item.style.display = 'inline';
+            setTimeout(() => item.style.opacity = 1, 100);
+        };
+        show(this.minimize);
+        show(this.input);
+    };
+    hideInput() {
+        let header = document.querySelector('.organism-header-main .atom-title-large');
+        const hide = item => {
+            if (window.screen.availWidth <= 768) header.style.display = 'block';
+            item.style.opacity = 0;
+            setTimeout(() => item.style.display = 'none', 300);
+        }
+        hide(this.minimize);
+        hide(this.input);
+    }
+};
+
 
 
 /***/ })

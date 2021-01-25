@@ -1,11 +1,11 @@
-include ../2-molecules/_header
-include ../3-organisms/_index-card-list
+include ../3-organisms/_header
+include ../3-organisms/_list
 
-mixin headerIndex()
+mixin bigHeader()
     .template-header
         +header()
 mixin cards()
     .template-cards-container
         .organism-index-card-list
-            +indexCards()
+            +list('index')
         
