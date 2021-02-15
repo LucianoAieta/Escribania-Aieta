@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                          
+    "module": "CommonJS",                    
+    "lib": ["es6", "DOM"],
+    "outDir": "build/",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "noImplicitAny": false,
+    "moduleResolution": "node"
+  },
+  "exclude": ["../../node_modules", "../../src/frontend"]
+}

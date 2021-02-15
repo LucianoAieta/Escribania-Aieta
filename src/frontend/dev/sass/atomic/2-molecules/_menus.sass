@@ -1,0 +1,26 @@
+.molecule-menu-options
+    display: flex
+    flex-direction: column
+    width: fit-content
+    background-color: $primary
+    align-content: center
+    align-items: center
+    position: absolute
+    right: 0
+    margin-right: 1em
+    height: fit-content
+    transform: scaleY(0)
+    transform-origin: 0% 0%
+    transition: .3s ease transform
+    padding: 0 .5em
+
+    @include media('>=1440px', '<=LGdesktop',)
+        font-size: 22px
+    @include media('>=1280px', '<=desktop',)
+        font-size: 16px
+    @include media('>=480px', '<=tablet')
+        font-size: 14px
+    @include media('>=phone', '<=480px')
+        font-size: 12px
+    @include media('<=phone')
+        font-size: 10px
