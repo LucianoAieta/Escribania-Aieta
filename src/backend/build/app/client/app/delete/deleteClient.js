@@ -9,9 +9,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DeleteClient = void 0;
+exports.deleteClient = void 0;
 const clientdb_1 = require("../../infraestructure/clientdb");
-const DeleteClient = (id) => __awaiter(void 0, void 0, void 0, function* () {
+const deleteClient = (id) => __awaiter(void 0, void 0, void 0, function* () {
     return yield clientdb_1.ClientDB.deleteClientById(id);
 });
-exports.DeleteClient = DeleteClient;
+exports.deleteClient = deleteClient;

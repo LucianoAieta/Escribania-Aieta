@@ -21,6 +21,7 @@ app.use((req, res, next) => {
     next();
 });
 // Routes
+app.use(require('./app/searcher/infrastructure/SearcherRouter'));
 app.use(require('./app/client/infraestructure/clientRouter'));
 // Start server
 app.listen(app.get('port'), () => {

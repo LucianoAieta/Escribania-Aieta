@@ -1,0 +1,9 @@
+include ../1-atoms/button
+
+mixin card(type, url, name, href)
+    if type === 'index'
+        .molecule-card-indexCard-index
+            img.img(src=`../assets/images/${url}`)
+            .container
+                +title('large', name)
+                +button('primary', 'outline', 'Administrar', href)

@@ -52,5 +52,10 @@ class ClientDB {
             ]);
         });
     }
+    static searchByText(text) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield connectDB_1.default.query('SELECT * FROM clients WHERE MATCH (name, surname) AGAINST (?)', [text]);
+        });
+    }
 }
 exports.ClientDB = ClientDB;

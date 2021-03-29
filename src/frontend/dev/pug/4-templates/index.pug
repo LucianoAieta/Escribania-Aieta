@@ -1,0 +1,11 @@
+include ../3-organisms/header
+include ../3-organisms/list
+
+mixin bigHeader()
+    .template-header
+        +header()
+mixin cards()
+    .template-cards-container
+        .organism-index-card-list
+            +list('index')
+        

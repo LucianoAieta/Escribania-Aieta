@@ -1,0 +1,55 @@
+%inputText
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    padding: .5em
+    width: fit-content
+    height: fit-content
+    line-height: 1em
+    font-size: 1em
+    outline: none
+
+.atom-inputText-primary-outline
+    @extend %inputText
+
+.atom-inputText-primary-outline
+    border: 0.0625em solid $grey
+    box-sizing: border-box
+
+    flex: none
+    order: 0
+    flex-grow: 0
+    transition: background-color .4s ease, color .4s ease
+
+    color: #222
+    font-weight: 400
+
+    &::placeholder
+        color: $primary
+
+    &:focus
+        border-color: $grey-dark
+
+.atom-inputText-cardInput-createCard
+    @extend %inputText
+    padding: .3em
+    font-size: 1.2em
+    width: 15em
+    margin-top: .3em
+    border: 0.0625em solid $grey
+    font-weight: 300
+    color: #222
+
+    &::placeholder
+        font-weight: 300
+        color: $grey-dark
+
+.atom-inputText-cardInput-crudCard
+    @extend %inputText
+    padding: .3em
+    font-size: 1.2em
+    width: 15em
+    border: 0.0625em solid $grey
+    font-weight: 300
+    transition: border-color .4s ease

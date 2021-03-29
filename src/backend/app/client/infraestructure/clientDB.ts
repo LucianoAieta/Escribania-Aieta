@@ -44,4 +44,11 @@ export class ClientDB {
 			id,
 		]);
 	}
+
+	public static async searchByText(text: string) {
+		return await pool.query(
+			'SELECT * FROM clients WHERE MATCH (name, surname) AGAINST (?)',
+			[text]
+		);
+	}
 }

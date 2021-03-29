@@ -1,0 +1,6 @@
+mixin form(type)
+    if type === 'crud'
+        form(autocomplete='off').molecule-form-searchForm-mainHeader
+            +icon('large', 'arrow', 'minimize', 'Ocultar')
+            +input-text('search-input', 'primary', 'outline', 'Buscar')
+            +icon('extra-large', 'search', 'search', 'Abrir búsqueda / Buscar')

@@ -1,0 +1,23 @@
+.organism-body-cardBody-crudCard, .organism-body-cardBody-createCard
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    padding: 2.5em
+    align-self: stretch
+    gap: 3em
+    background-color: $white
+
+.organism-body-cardBody-createCard
+    opacity: 0
+    transform: scale(.4)
+    transition: transform .3s ease, opacity .2s ease
+    height: fit-content
+    margin-top: 2em
+    .molecule-item-bodyItem-crudCard:last-child
+        flex-direction: row
+        justify-content: center
+        align-self: flex-end
+        align-items: center
+        height: fit-content
+        gap: .5em
+        margin-top: -0.5em

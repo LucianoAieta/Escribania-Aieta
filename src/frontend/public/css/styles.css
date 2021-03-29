@@ -1,3 +1,4 @@
+/* Atomic design = .atomic-element-type-group */
 /* Helpers */
 /**
 *
@@ -177,8 +178,10 @@ input {
 				align-items: center;
 				padding: 0.5em;
 				width: -webkit-fit-content;
+				width: -moz-fit-content;
 				width: fit-content;
 				height: -webkit-fit-content;
+				height: -moz-fit-content;
 				height: fit-content;
 				cursor: pointer;
 				border-radius: 1em;
@@ -338,7 +341,7 @@ input {
 				color: #ffffff;
 }
 
-.atom-crud-card-icon-button {
+.atom-button-navButton-crudCard {
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -351,22 +354,24 @@ input {
 				cursor: pointer;
 }
 
-.atom-crud-card-input, .atom-create-card-input, .atom-input-text-primary-outline {
+.atom-inputText-cardInput-crudCard, .atom-inputText-cardInput-createCard, .atom-inputText-primary-outline {
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: flex-start;
 				padding: 0.5em;
 				width: -webkit-fit-content;
+				width: -moz-fit-content;
 				width: fit-content;
 				height: -webkit-fit-content;
+				height: -moz-fit-content;
 				height: fit-content;
 				line-height: 1em;
 				font-size: 1em;
 				outline: none;
 }
 
-.atom-input-text-primary-outline {
+.atom-inputText-primary-outline {
 				border: 0.0625em solid #BDBDBD;
 				box-sizing: border-box;
 				flex: none;
@@ -376,14 +381,14 @@ input {
 				color: #222;
 				font-weight: 400;
 }
-.atom-input-text-primary-outline::placeholder {
+.atom-inputText-primary-outline::placeholder {
 				color: #002430;
 }
-.atom-input-text-primary-outline:focus {
+.atom-inputText-primary-outline:focus {
 				border-color: #8D8D8D;
 }
 
-.atom-create-card-input {
+.atom-inputText-cardInput-createCard {
 				padding: 0.3em;
 				font-size: 1.2em;
 				width: 15em;
@@ -392,12 +397,12 @@ input {
 				font-weight: 300;
 				color: #222;
 }
-.atom-create-card-input::placeholder {
+.atom-inputText-cardInput-createCard::placeholder {
 				font-weight: 300;
 				color: #8D8D8D;
 }
 
-.atom-crud-card-input {
+.atom-inputText-cardInput-crudCard {
 				padding: 0.3em;
 				font-size: 1.2em;
 				width: 15em;
@@ -426,15 +431,15 @@ input {
 				cursor: pointer;
 }
 
-.logo-small {
+.atom-logo-small {
 				width: 3em;
 }
 
-.logo-medium {
+.atom-logo-medium {
 				width: 4em;
 }
 
-.logo-large {
+.atom-logo-large {
 				width: 5em;
 }
 
@@ -471,7 +476,7 @@ input {
 				line-height: 1.1875em;
 }
 
-.atom-options-item {
+.atom-item-menuItem-optionsMenu {
 				display: flex;
 				flex-direction: row;
 				align-items: center;
@@ -480,13 +485,14 @@ input {
 				color: #ffffff;
 				position: static;
 				width: -webkit-fit-content;
+				width: -moz-fit-content;
 				width: fit-content;
 				height: 2.2em;
 				text-decoration: none;
 				cursor: pointer;
 }
 
-.atom-crud-card-nav-item {
+.atom-item-navItem-crudCard {
 				display: flex;
 				flex-direction: row;
 				align-items: center;
@@ -497,31 +503,33 @@ input {
 				border-radius: 10px;
 				position: static;
 				height: -webkit-fit-content;
+				height: -moz-fit-content;
 				height: fit-content;
 				width: -webkit-fit-content;
+				width: -moz-fit-content;
 				width: fit-content;
 				background: #ffffff;
 }
 
 /* Molecules */
-.molecule-form-search {
+.molecule-form-searchForm-mainHeader {
 				height: 100%;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
 }
 
-.molecule-index-card {
+.molecule-card-indexCard-index {
 				width: 27.9844em;
 				box-shadow: 0 0.125em 0.1875em 0 #BDBDBD;
 }
-.molecule-index-card .img {
+.molecule-card-indexCard-index .img {
 				object-fit: cover;
 				width: 100%;
 				height: 18.8719em;
 				border-bottom: 0.0625em solid #002430;
 }
-.molecule-index-card .container {
+.molecule-card-indexCard-index .container {
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
@@ -529,7 +537,7 @@ input {
 				padding: 0.8em 1em;
 }
 
-.molecule-confirm-card {
+.molecule-card-confirmCard {
 				position: fixed;
 				transform: scale(0.4);
 				opacity: 0;
@@ -538,6 +546,7 @@ input {
 				justify-items: center;
 				justify-content: center;
 				height: -webkit-fit-content;
+				height: -moz-fit-content;
 				height: fit-content;
 				gap: 2em;
 				padding: 2em;
@@ -546,17 +555,18 @@ input {
 				background-color: #ffffff;
 				transition: transform 0.4s ease, opacity 0.3s ease;
 }
-.molecule-confirm-card .card-buttons {
+.molecule-card-confirmCard .card-buttons {
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				gap: 2em;
 }
 
-.molecule-menu-options {
+.molecule-menu-optionsMenu-mainHeader, .molecule-menu-optionsMenu-crudCard {
 				display: flex;
 				flex-direction: column;
 				width: -webkit-fit-content;
+				width: -moz-fit-content;
 				width: fit-content;
 				background-color: #002430;
 				align-content: center;
@@ -565,6 +575,7 @@ input {
 				right: 0;
 				margin-right: 1em;
 				height: -webkit-fit-content;
+				height: -moz-fit-content;
 				height: fit-content;
 				transform: scaleY(0);
 				transform-origin: 0% 0%;
@@ -572,32 +583,32 @@ input {
 				padding: 0 0.5em;
 }
 @media (min-width: 1440px) and (max-width: 1920px) {
-				.molecule-menu-options {
+				.molecule-menu-optionsMenu-mainHeader, .molecule-menu-optionsMenu-crudCard {
 								font-size: 22px;
 				}
 }
 @media (min-width: 1280px) and (max-width: 1366px) {
-				.molecule-menu-options {
+				.molecule-menu-optionsMenu-mainHeader, .molecule-menu-optionsMenu-crudCard {
 								font-size: 16px;
 				}
 }
 @media (min-width: 480px) and (max-width: 768px) {
-				.molecule-menu-options {
+				.molecule-menu-optionsMenu-mainHeader, .molecule-menu-optionsMenu-crudCard {
 								font-size: 14px;
 				}
 }
 @media (min-width: 360px) and (max-width: 480px) {
-				.molecule-menu-options {
+				.molecule-menu-optionsMenu-mainHeader, .molecule-menu-optionsMenu-crudCard {
 								font-size: 12px;
 				}
 }
 @media (max-width: 360px) {
-				.molecule-menu-options {
+				.molecule-menu-optionsMenu-mainHeader, .molecule-menu-optionsMenu-crudCard {
 								font-size: 10px;
 				}
 }
 
-.molecule-title-logo {
+.molecule-brand-titleAndLogo-header {
 				display: flex;
 				flex-direction: row;
 				justify-content: center;
@@ -607,7 +618,7 @@ input {
 				flex-grow: 0;
 }
 
-.molecule-crud-item {
+.molecule-item-listItem-crudList {
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
@@ -619,18 +630,18 @@ input {
 				border: 0.0625em solid transparent;
 				transition: background-color 0.3s ease, border-color 0.3s ease;
 }
-.molecule-crud-item .atom-title-medium {
+.molecule-item-listItem-crudList .atom-title-medium {
 				color: #3B3A3A;
 }
-.molecule-crud-item:hover {
+.molecule-item-listItem-crudList:hover {
 				background-color: #2d4c59;
 				border-color: #000007;
 }
-.molecule-crud-item:hover .atom-title-medium {
+.molecule-item-listItem-crudList:hover .atom-title-medium {
 				color: #fff;
 }
 
-.molecule-crud-card-body-item {
+.molecule-item-bodyItem-crudCard {
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -638,30 +649,31 @@ input {
 				gap: 0.25em;
 				position: static;
 				width: -webkit-fit-content;
+				width: -moz-fit-content;
 				width: fit-content;
 				height: 3em;
 }
-.molecule-crud-card-body-item .atom-title-small {
+.molecule-item-bodyItem-crudCard .atom-title-small {
 				font-weight: 400;
 }
-.molecule-crud-card-body-item .atom-text-medium,
-.molecule-crud-card-body-item .atom-crud-card-input {
+.molecule-item-bodyItem-crudCard .atom-text-medium,
+.molecule-item-bodyItem-crudCard .atom-inputText-cardInput-crudCard {
 				margin-left: 1.3em;
 				border: 0.0625em solid #fff;
 				outline: none;
 }
 
-.molecule-crud-card-nav {
+.molecule-nav-cardNav-crudCard {
 				display: flex;
 				flex-direction: row;
 				justify-content: center;
 				align-items: center;
-				padding: 0px;
+				padding: 0;
 				flex: none;
 				order: 1;
 }
 
-.molecule-alert-header {
+.molecule-header-alertHeader-defaultAlert {
 				display: flex;
 				flex-direction: row;
 				align-items: center;
@@ -671,27 +683,33 @@ input {
 				border-bottom: 0.0063em solid rgba(0, 0, 0, 0.17);
 }
 
-.molecule-alert {
+.molecule-body-alertContent-defaultAlert {
+				max-width: 23em;
+				line-height: 1em;
+}
+
+.molecule-body-alertBody-defaultAlert {
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: flex-start;
 				gap: 0.5em;
 				width: -webkit-fit-content;
+				width: -moz-fit-content;
 				width: fit-content;
 				max-width: 23.6396em;
 }
-.molecule-alert .atom-title-medium {
+.molecule-body-alertBody-defaultAlert .atom-title-medium {
 				font-weight: 400;
 				color: rgba(0, 0, 0, 0.7);
 }
 
 /* Organisms */
-.organism-nav-icons {
+.organism-nav-iconsContainer-mainHeader {
 				display: flex;
 }
 
-.organism-header-main {
+.organism-header-mainHeader {
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
@@ -700,6 +718,7 @@ input {
 				padding: 1em 2em 1em 1em;
 				width: 100%;
 				height: -webkit-fit-content;
+				height: -moz-fit-content;
 				height: fit-content;
 				background: #ffffff;
 				position: sticky;
@@ -709,49 +728,49 @@ input {
 				border-bottom: 0.0187em solid #EFEFEF;
 				/* Search form styles */
 }
-.organism-header-main .atom-title-large {
+.organism-header-mainHeader .atom-title-large {
 				padding: 0 0 0 0.5em;
 }
-.organism-header-main #create,
-.organism-header-main .molecule-form-search {
+.organism-header-mainHeader #create,
+.organism-header-mainHeader .molecule-form-searchForm-mainHeader {
 				margin-right: 2em;
 }
-.organism-header-main #search-input, .organism-header-main #minimize {
+.organism-header-mainHeader #search-input, .organism-header-mainHeader #minimize {
 				opacity: 0;
 				display: none;
 				transition: all 0.3s ease;
 }
-.organism-header-main #search-input {
+.organism-header-mainHeader #search-input {
 				height: 2em;
 				margin-right: 0.5em;
 }
 @media (min-width: 1440px) and (max-width: 1920px) {
-				.organism-header-main {
+				.organism-header-mainHeader {
 								font-size: 22px;
 				}
 }
 @media (min-width: 1280px) and (max-width: 1366px) {
-				.organism-header-main {
+				.organism-header-mainHeader {
 								font-size: 16px;
 				}
 }
 @media (min-width: 480px) and (max-width: 768px) {
-				.organism-header-main {
+				.organism-header-mainHeader {
 								font-size: 14px;
 				}
 }
 @media (min-width: 360px) and (max-width: 480px) {
-				.organism-header-main {
+				.organism-header-mainHeader {
 								font-size: 10px;
 				}
 }
 @media (max-width: 360px) {
-				.organism-header-main {
+				.organism-header-mainHeader {
 								font-size: 7px;
 				}
 }
 
-.organism-crud-card-header {
+.organism-header-cardHeader-crudCard {
 				display: flex;
 				position: sticky;
 				top: 0;
@@ -762,25 +781,26 @@ input {
 				padding: 1em;
 				width: 48em;
 				height: -webkit-fit-content;
+				height: -moz-fit-content;
 				height: fit-content;
 				border-bottom: 0.0625em solid #BDBDBD;
 				background-color: #ffffff;
 }
-.organism-crud-card-header .atom-title-large {
+.organism-header-cardHeader-crudCard .atom-title-large {
 				font-weight: 400;
 				color: #343434;
 }
-.organism-crud-card-header .molecule-menu-options {
+.organism-header-cardHeader-crudCard .molecule-menu-optionsMenu-crudCard {
 				top: 4.6269em;
 }
 
-.organism-crud-list {
+.organism-list-crudList {
 				display: grid;
 				grid-template-rows: repeat(auto-fill, 4em);
 				grid-template-columns: repeat(2, 32em);
 				gap: 0.5em 5em;
 }
-.organism-crud-list:before {
+.organism-list-crudList:before {
 				content: "";
 				position: fixed;
 				top: 8em;
@@ -792,44 +812,44 @@ input {
 				opacity: 1;
 }
 @media (min-width: 1440px) and (max-width: 1920px) {
-				.organism-crud-list {
+				.organism-list-crudList {
 								font-size: 20px;
 				}
 }
 @media (min-width: 1280px) and (max-width: 1366px) {
-				.organism-crud-list {
+				.organism-list-crudList {
 								font-size: 16px;
 				}
 }
 @media (min-width: 480px) and (max-width: 768px) {
-				.organism-crud-list {
+				.organism-list-crudList {
 								font-size: 14px;
 								grid-template-columns: repeat(auto-fill, 32em);
 				}
-				.organism-crud-list::before {
+				.organism-list-crudList::before {
 								opacity: 0;
 				}
 }
 @media (min-width: 360px) and (max-width: 480px) {
-				.organism-crud-list {
+				.organism-list-crudList {
 								font-size: 12px;
 								grid-template-columns: repeat(auto-fill, 32em);
 				}
-				.organism-crud-list::before {
+				.organism-list-crudList::before {
 								opacity: 0;
 				}
 }
 @media (max-width: 360px) {
-				.organism-crud-list {
+				.organism-list-crudList {
 								font-size: 10px;
 								grid-template-columns: repeat(auto-fill, 32em);
 				}
-				.organism-crud-list::before {
+				.organism-list-crudList::before {
 								opacity: 0;
 				}
 }
 
-.organism-index-card-list {
+.organism-list-indexCardList-index {
 				display: grid;
 				grid-template-rows: repeat(auto-fit);
 				grid-template-columns: repeat(2, 27.9844em);
@@ -840,35 +860,35 @@ input {
 				gap: 3em 6em;
 }
 @media (min-width: 1440px) and (max-width: 1920px) {
-				.organism-index-card-list {
+				.organism-list-indexCardList-index {
 								font-size: 22px;
 				}
 }
 @media (min-width: 1280px) and (max-width: 1366px) {
-				.organism-index-card-list {
+				.organism-list-indexCardList-index {
 								font-size: 16px;
 				}
 }
 @media (min-width: 480px) and (max-width: 768px) {
-				.organism-index-card-list {
+				.organism-list-indexCardList-index {
 								font-size: 14px;
 								grid-template-columns: repeat(auto-fill, 27.9844em);
 				}
 }
 @media (min-width: 360px) and (max-width: 480px) {
-				.organism-index-card-list {
+				.organism-list-indexCardList-index {
 								font-size: 12px;
 								grid-template-columns: repeat(auto-fill, 27.9844em);
 				}
 }
 @media (max-width: 360px) {
-				.organism-index-card-list {
+				.organism-list-indexCardList-index {
 								font-size: 10px;
 								grid-template-columns: repeat(auto-fill, 27.9844em);
 				}
 }
 
-.organism-crud-card-body, .organism-create-card-body {
+.organism-body-cardBody-crudCard, .organism-body-cardBody-createCard {
 				display: flex;
 				flex-direction: column;
 				align-items: flex-start;
@@ -878,32 +898,34 @@ input {
 				background-color: #ffffff;
 }
 
-.organism-create-card-body {
+.organism-body-cardBody-createCard {
 				opacity: 0;
 				transform: scale(0.4);
 				transition: transform 0.3s ease, opacity 0.2s ease;
 				height: -webkit-fit-content;
+				height: -moz-fit-content;
 				height: fit-content;
 				margin-top: 2em;
 }
-.organism-create-card-body .molecule-crud-card-body-item:last-child {
+.organism-body-cardBody-createCard .molecule-item-bodyItem-crudCard:last-child {
 				flex-direction: row;
 				justify-content: center;
 				align-self: flex-end;
 				align-items: center;
 				height: -webkit-fit-content;
+				height: -moz-fit-content;
 				height: fit-content;
 				gap: 0.5em;
 				margin-top: -0.5em;
 }
 
-.organism-crud-card {
+.organism-card-crudCard {
 				position: absolute;
 				display: flex;
 				flex-direction: column;
 				align-items: flex-start;
 				width: 50em;
-				height: 96vh;
+				height: 90vh;
 				background-color: #ffffff;
 				overflow-y: scroll;
 				overflow-x: hidden;
@@ -924,7 +946,7 @@ input {
 				background: #8D8D8D;
 }
 
-.organism-overlay {
+.organism-overlay-defaultOverlay {
 				visibility: hidden;
 				position: fixed;
 				top: 0;
@@ -936,21 +958,23 @@ input {
 				align-items: center;
 				justify-content: center;
 }
-.organism-overlay #exit {
+.organism-overlay-defaultOverlay #exit {
 				position: absolute;
 				top: 1em;
 				right: 14em;
 }
 
-.organism-alert {
+.organism-alert-defaultAlert {
 				display: flex;
 				flex-direction: row;
 				align-items: flex-start;
 				padding: 1em;
 				gap: 1em;
 				height: -webkit-fit-content;
+				height: -moz-fit-content;
 				height: fit-content;
 				width: -webkit-fit-content;
+				width: -moz-fit-content;
 				width: fit-content;
 				border: 0.0063em solid #BDBDBD;
 				position: absolute;

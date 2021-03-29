@@ -1,0 +1,17 @@
+include ./nav
+include ../1-atoms/title
+include ../1-atoms/logo
+
+mixin header(type='normal')
+	if (type === 'normal')
+		.organism-header-mainHeader
+			a.molecule-brand-titleAndLogo-header(href='index.html')
+				+logo('medium', 'logo-sw-black')
+				+title('large', 'Escribanía Silva Wapenka')
+			+nav('default')
+	if (type === 'crud')
+		.organism-header-mainHeader
+			a.molecule-brand-titleAndLogo-header(href='index.html')
+				+logo('medium', 'logo-sw-black')
+				+title('large', 'Escribanía Silva Wapenka')
+			+nav('crud')

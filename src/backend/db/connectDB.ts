@@ -1,5 +1,4 @@
 import mysql, { MysqlError, Pool, PoolConnection } from 'mysql';
-import { session } from 'passport';
 import { promisify } from 'util';
 
 interface keydatabase {

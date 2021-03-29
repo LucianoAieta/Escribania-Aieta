@@ -1,0 +1,14 @@
+include ../4-templates/crud
+include ../3-organisms/card
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel='icon' type='image/png' href='../assets/icons/logo-sw-filled-black.png')
+        link(rel="stylesheet", href="../css/styles.css")
+        title Clientes
+    body
+        .template-crud
+            +bigHeader
+            +crudList(0)
+            .organism-overlay-defaultOverlay

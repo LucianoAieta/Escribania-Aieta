@@ -1,0 +1,41 @@
+.molecule-item-listItem-crudList
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-self: stretch
+    align-items: center
+
+    padding: 1em
+    width: 30em
+    height: 2em
+    border: 0.0625em solid transparent
+    cursor: default
+    transition: background-color .3s ease, border-color .3s ease
+    .atom-title-medium
+        color: #3B3A3A
+
+    &:hover
+        background-color: $primary-light
+        border-color: $primary-dark
+        .atom-title-medium
+            color: #fff
+
+.molecule-item-bodyItem-crudCard
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    gap: 0.25em
+
+    position: static
+    width: fit-content
+    height: 3em
+
+    .atom-title-small
+        font-weight: 400
+
+    .atom-text-medium,
+    .atom-inputText-cardInput-crudCard
+        margin-left: 1.3em
+        border: 0.0625em solid #fff
+        outline: none

@@ -1,7 +1,8 @@
 import express, { Request, Response } from 'express';
 import { CreateClient } from '../app/create/createClient';
-import { DeleteClient } from '../app/delete/deleteClient';
+import { deleteClient } from '../app/delete/deleteClient';
 import { loadClients } from '../app/load/loadClients';
+import SearchClientByName from '../app/search/SearchClientByName';
 import { updateClientData } from '../app/update/updateClient';
 const router = express.Router();
 
@@ -11,7 +12,7 @@ router.post('/createclient', async (req: Request, res: Response) => {
 });
 
 router.post('/deleteclient', async (req: Request, res: Response) => {
-	await DeleteClient(req.body.id);
+	await deleteClient(req.body.id);
 	res.json(JSON.stringify({ deleted: true }));
 });
 

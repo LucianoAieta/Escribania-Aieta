@@ -23,7 +23,7 @@ router.post('/createclient', (req, res) => __awaiter(void 0, void 0, void 0, fun
     res.json(JSON.stringify({ created: true }));
 }));
 router.post('/deleteclient', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    yield deleteClient_1.DeleteClient(req.body.id);
+    yield deleteClient_1.deleteClient(req.body.id);
     res.json(JSON.stringify({ deleted: true }));
 }));
 router.get('/clientes', (req, res) => __awaiter(void 0, void 0, void 0, function* () {

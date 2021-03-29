@@ -1,0 +1,154 @@
+%button
+    display: flex
+    justify-content: center
+    align-items: center
+
+    padding: .5em
+    width: fit-content
+    height: fit-content
+
+    cursor: pointer
+    border-radius: 1em
+    text-decoration: none
+    font-size: 1.1em
+    outline: none
+    border: none
+    font-weight: 400
+
+.atom-button-primary-outline,
+.atom-button-primary-filled,
+.atom-button-primary-empty,
+.atom-button-secondary-outline,
+.atom-button-secondary-filled,
+.atom-button-secondary-empty,
+.atom-button-green-outline,
+.atom-button-green-filled,
+.atom-button-green-empty,
+.atom-button-red-outline,
+.atom-button-red-filled,
+.atom-button-red-empty,
+.atom-button-orange-outline,
+.atom-button-orange-filled,
+.atom-button-orange-empty
+    @extend %button
+    background-color: $white
+
+/* Primary
+.atom-button-primary-outline
+    color: $primary
+    border: 0.0625em solid $primary
+    box-sizing: border-box
+    transition: background-color .3s ease, color .3s ease
+    background-color: $white
+    &:hover
+        background-color: $primary
+        color: $white
+
+.atom-button-primary-filled
+    background: $primary
+    color: $white
+
+.atom-button-primary-empty
+    color: $primary
+    border: none
+    transition: background-color .3s ease, color .3s ease
+    &:hover
+        color: $white
+        background-color: $primary
+
+/* Secondary
+.atom-button-secondary-outline
+    color: $secondary
+    border: 0.0625em solid $secondary
+    transition: background-color .3s ease, color .3s ease
+    &:hover
+        background-color: $secondary
+        color: $white
+
+.atom-button-secondary-filled
+    border: 0.0625em solid $primary-dark
+    background: $secondary-light
+    color: $primary-dark
+
+.atom-button-secondary-empty
+    transition: background-color .4s ease, color .4s ease, border-color .5s ease
+    border: 0.0625em solid transparent
+    color: $secondary-light
+    &:hover
+        background: $secondary-light
+        color: $primary-dark
+        border-color: $primary-dark
+
+/* Green
+.atom-button-green-outline
+    color: $green
+    border: 0.0625em solid $green
+    transition: background-color .3s ease, color .3s ease
+    &:hover
+        background-color: $green
+        color: $white
+
+.atom-button-green-filled
+    background: $green
+    color: $white
+
+.atom-button-green-empty
+    transition: background-color .4s ease, color .4s ease
+    color: $green
+    &:hover
+        background: $green
+        color: $white
+
+/* Red
+.atom-button-red-outline
+    color: $red
+    border: 0.0625em solid $red
+    transition: background-color .3s ease, color .3s ease
+    &:hover
+        background-color: $red
+        color: $white
+
+.atom-button-red-filled
+    background: $red
+    color: $white
+
+.atom-button-red-empty
+    transition: background-color .4s ease, color .4s ease
+    color: $red
+    &:hover
+        background: $red
+        color: $white
+
+/* Orange
+
+.atom-button-orange-outline
+    color: $orange
+    border: 0.0625em solid $orange
+    transition: background-color .3s ease, color .3s ease
+    &:hover
+        background-color: $orange
+        color: $white
+
+.atom-button-orange-filled
+    background: $orange
+    color: $white
+
+.atom-button-orange-empty
+    transition: background-color .4s ease, color .4s ease
+    color: $orange
+    &:hover
+        background: $orange
+        color: $white
+
+.atom-button-navButton-crudCard
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    background-color: $primary
+    padding: .3em
+    transition: opacity .5s ease
+    opacity: 0
+    margin-right: 1em
+
+    cursor: pointer
