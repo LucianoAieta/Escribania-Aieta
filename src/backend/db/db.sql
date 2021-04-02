@@ -8,12 +8,6 @@ CREATE TABLE users (
     PRIMARY KEY(id)
 );
 
-ALTER TABLE users
-ADD fullname varchar(60) NOT NULL;
-
-ALTER TABLE users
-add created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
-
 SELECT * FROM users;
 
 DESCRIBE users;

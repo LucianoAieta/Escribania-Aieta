@@ -1,4 +1,4 @@
-class Menu {
+export default class MenuDOM {
 	static create() {
 		let header = document.querySelector('.template-header') as HTMLElement;
 		let options = document.createElement('DIV') as HTMLElement;
@@ -18,13 +18,4 @@ class Menu {
 		options.style.transform = 'scaleY(0)';
 		setTimeout(() => options.remove(), 300);
 	}
-
-	static run() {
-		const options_button = <HTMLElement>(
-			document.querySelector('.molecule-menu-optionsMenu-mainHeader')
-		);
-		options_button === null ? Menu.create() : Menu.remove(options_button);
-	}
 }
-
-export { Menu };

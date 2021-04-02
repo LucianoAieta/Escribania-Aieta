@@ -4,10 +4,13 @@ const path = require('path');
 // Client Page
 module.exports = {
 	mode: 'development',
-	entry: './src/frontend/dev/ts/clients/app/ClientPage.ts',
+	entry: {
+		index: './src/frontend/dev/ts/index/app/IndexPage.ts',
+		clients: './src/frontend/dev/ts/clients/app/ClientPage.ts',
+	},
 	output: {
 		path: path.resolve(__dirname + '/src/frontend/public/js'),
-		filename: 'client.js',
+		filename: '[name].js',
 	},
 	module: {
 		rules: [
@@ -37,8 +40,14 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			filename: '../../public/views/clients.html',
+			chunks: ['clients'],
+			filename: '../views/clients.html',
 			template: './src/frontend/dev/pug/5-pages/clients.pug',
+		}),
+		new HtmlWebpackPlugin({
+			chunks: ['index'],
+			filename: '../views/index.html',
+			template: './src/frontend/dev/pug/5-pages/index.pug',
 		}),
 	],
 };

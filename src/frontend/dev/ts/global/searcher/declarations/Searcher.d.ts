@@ -1,5 +1,5 @@
 export default interface SearcherLogic {
-	page_type: string;
+	PAGE_TYPE: string;
 
 	run(): void;
 }

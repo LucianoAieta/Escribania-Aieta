@@ -5,6 +5,7 @@ import { CreateClientCard } from '../dom/cards/CreateClientCard';
 import { ClientPost } from '../infraestructure/requests/ClientPost';
 import ClientDataToCreate from './declarations/ClientDataToCreate';
 import CreateClientLogic from './declarations/CreateClient';
+import ClientPageLoaders from './loaders/ClientPageLoaders';
 
 export default class CreateClient implements CreateClientLogic {
 	constructor(public data: ClientDataToCreate) {
@@ -28,6 +29,36 @@ export default class CreateClient implements CreateClientLogic {
 
 	finish() {
 		CreateClientCard.hideCard();
+	}
+
+	static async card() {
+		const cancel_button = document.querySelector(
+			'.organism-body-cardBody-createCard .atom-button-primary-empty'
+		) as HTMLElement;
+
+		cancel_button.addEventListener('click', () => CreateClientCard.hideCard());
+
+		const create_button = document.querySelector(
+			'.organism-body-cardBody-createCard .atom-button-primary-outline'
+		) as HTMLElement;
+
+		create_button.addEventListener('click', async () => {
+			const data: NodeListOf<HTMLInputElement> = document.querySelectorAll(
+				'.organism-body-cardBody-createCard .atom-inputText-cardInput-createCard'
+			);
+
+			const new_client_data: ClientDataToCreate = {
+				name: data[0].value,
+				surname: data[1].value,
+				email: data[2].value,
+				username: data[3].value,
+				password: data[4].value,
+			};
+
+			const new_client = new CreateClient(new_client_data);
+			await new_client.logic();
+			await ClientPageLoaders.reloadAndRelist();
+		});
 	}
 
 	async logic() {

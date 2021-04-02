@@ -18,9 +18,6 @@
         padding: 0 0 0 .5em
 
     /* Search form styles
-    #create,
-    .molecule-form-searchForm-mainHeader
-        margin-right: 2em
     #search-input, #minimize
         opacity: 0
         display: none
@@ -28,6 +25,14 @@
     #search-input
         height: 2em
         margin-right: .5em
+
+    #reload.active
+        animation: rotation360 .7s linear infinite
+        @keyframes rotation360
+            0%
+                transform: rotate(0deg)
+            100%
+                transform: rotate(360deg)
 
     @include media('>=1440px', '<=LGdesktop',)
         font-size: 22px

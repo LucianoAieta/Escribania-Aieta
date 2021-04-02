@@ -1,6 +1,6 @@
 import Alert from '../../global/alert';
 import { confirmCard } from '../../global/confirm-card';
-import { Menu } from '../../global/menu/menu';
+import MenuDOM from '../../global/header/buttons/menu/dom/MenuDOM';
 import { verifyIfIsEmpty } from '../../global/validators';
 import ClientData from '../declarations/ClientData';
 import { ClientCard } from '../dom/cards/ClientCard';
@@ -35,7 +35,7 @@ export class EditClient implements EditClientLogic {
 			'.organism-header-cardHeader-crudCard .molecule-menu-optionsMenu-crudCard'
 		) as HTMLElement;
 
-		Menu.remove(options);
+		MenuDOM.remove(options);
 	}
 
 	async confirm() {

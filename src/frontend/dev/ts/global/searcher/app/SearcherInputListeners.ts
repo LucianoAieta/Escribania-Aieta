@@ -15,7 +15,10 @@ export default class SearcherInputListeners
 
 	open(SEARCH_INPUT_CLASS: SearcherInput) {
 		const SEARCH_BUTTON = document.querySelector('#search') as HTMLElement;
-		SEARCH_BUTTON.addEventListener('click', () => SEARCH_INPUT_CLASS.show());
+		SEARCH_BUTTON.addEventListener('click', () => {
+			SEARCH_INPUT_CLASS.show();
+			(document.querySelector('#search-input') as HTMLInputElement).focus();
+		});
 	}
 
 	search() {
