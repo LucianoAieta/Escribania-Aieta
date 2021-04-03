@@ -32,9 +32,12 @@ export default class CreateClient implements CreateClientLogic {
 	}
 
 	static async card() {
+		CreateClientCard.showCard();
+
 		const cancel_button = document.querySelector(
 			'.organism-body-cardBody-createCard .atom-button-primary-empty'
 		) as HTMLElement;
+		console.log(cancel_button);
 
 		cancel_button.addEventListener('click', () => CreateClientCard.hideCard());
 

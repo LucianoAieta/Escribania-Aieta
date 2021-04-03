@@ -6,6 +6,8 @@ export interface ClientGet {
 
 export class ClientGet implements ClientGet {
 	public static async getClients(): Promise<ClientData[]> {
-		return await (await fetch('http://localhost:7000/clientes')).json();
+		return await (
+			await fetch('https://escribania-aieta.herokuapp.com/clientes')
+		).json();
 	}
 }

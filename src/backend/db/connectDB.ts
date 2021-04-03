@@ -1,5 +1,6 @@
 import mysql, { MysqlError, Pool, PoolConnection } from 'mysql';
 import { promisify } from 'util';
+require('dotenv').config();
 
 interface keydatabase {
 	user: string;
@@ -9,10 +10,10 @@ interface keydatabase {
 }
 
 const database: keydatabase = {
-	host: 'localhost',
-	user: 'root',
-	password: '',
-	database: 'escribania_sw',
+	host: process.env.DB_HOST,
+	user: process.env.DB_USER,
+	password: process.env.DB_PASSWORD,
+	database: process.env.DB_NAME,
 };
 
 const pool = mysql.createPool(database);

@@ -4,11 +4,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 const mysql_1 = __importDefault(require("mysql"));
 const util_1 = require("util");
+require('dotenv').config();
 const database = {
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'escribania_sw',
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
 };
 const pool = mysql_1.default.createPool(database);
 pool.getConnection((err, connection) => {
